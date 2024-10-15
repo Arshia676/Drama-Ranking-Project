@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drama Ranking Project.</title>
+    <style>
+      * body {
+        background: fixed;
+        background-color: rgba(205, 205, 159, 0.395);
+      }
+      h1 {
+        color: rgb(7, 12, 108);
+        text-align: center;
+        text-shadow: 1.7px 1.5px 2px rgb(9, 9, 58);
+        /* font-size: 2px 2px; */
+      }
+      h2 {
+        color: rgb(19, 19, 101);
+        padding-left: 25px;
+        /* margin-left: 20px; */
+      }
+      .intro {
+        color: rgb(48, 11, 54);
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size: 18px;
+        background-color: rgb(222, 224, 233);
+        border: 4px solid rgb(138, 139, 209);
+        border-radius: 5px;
+        margin-left: 100px;
+        padding-top: 30px;
+        padding-left: 25px;
+        padding-right: 20px;
+        padding-bottom: 30px;
+
+        /* padding: 35px 30px; */
+        height: 140px;
+        width: 600px;
+        line-height: 2em;
+      }
+      h3 {
+        color: rgb(32, 16, 49);
+        padding-left: 15px;
+      }
+      .start {
+        color: rgb(85, 8, 116);
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size: 22px;
+        line-height: 2em;
+      }
+
+      #art,
+      #alsa,
+      #won,
+      #han {
+        background-color: rgba(231, 178, 162, 0.446);
+        border: 4px solid rgba(131, 116, 199, 0.554);
+        border-radius: 4px;
+        height: 250px;
+        width: 600px;
+        margin-top: 40px;
+        margin-bottom: 30px;
+        margin-right: 40px;
+        margin-left: 120px;
+        padding-right: 25px;
+        padding-left: 30px;
+        padding-top: 25px;
+        padding-bottom: 20px;
+        line-height: 2.5em;
+      }
+
+      .end {
+        line-height: 2em;
+        background-color: rgba(223, 210, 241, 0.728);
+        border: 4px solid rgb(102, 113, 184);
+        border-radius: 4px;
+        height: 320px;
+        width: 900px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        margin-right: 30px;
+        margin-left: 55px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-right: 10px;
+        padding-left: 20px;
+        color: rgb(98, 5, 112);
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size: 18.5px;
+      }
+      img {
+        border: 6px solid darkslateblue;
+      }
+      #ert {
+        background-color: rgba(239, 229, 249, 0.774);
+        border: 4px solid rgb(130, 153, 197);
+        margin-left: 50px;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-top: 30px;
+        padding-bottom: 20px;
+        width: 500px;
+        height: 120px;
+      }
+      #age {
+        background-color: rgba(245, 203, 236, 0.571);
+        line-height: 2em;
+        height: 110px;
+        width: 550px;
+        border: 4px solid rgba(39, 63, 172, 0.685);
+        border-radius: 4px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-right: 30px;
+        margin-left: 50px;
+        padding-top: 30px;
+        padding-bottom: 20px;
+        padding-right: 30px;
+        padding-left: 40px;
+      }
+      .sun {
+        background-color: rgba(205, 176, 234, 0.638);
+        line-height: 2em;
+        height: 400px;
+        width: 990px;
+        border: 4px solid rgb(70, 91, 155);
+        border-radius: 4px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-right: 30px;
+        margin-left: 48px;
+        padding-top: 8px;
+        padding-bottom: 13px;
+        padding-right: 10px;
+        padding-left: 10px;
+      }
+      .sun,
+      .start,
+      .spoiler {
+        font-family: "Dancing Script";
+      }
+      .sun,
+      .start,
+      .spoiler {
+        font-size: 18px;
+      }
+      .spoiler {
+        background-color: rgba(133, 138, 158, 0.688);
+        line-height: 2em;
+        height: 460px;
+        width: 1010px;
+        border: 4px solid rgba(80, 97, 148, 0.968);
+        border-radius: 4px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-right: 30px;
+        margin-left: 48px;
+        padding-top: 5px;
+        padding-left: 2px;
+        padding-right: 2px;
+      }
+      #yourself {
+        background-color: rgb(204, 197, 236);
+        border: 5px solid rgb(113, 63, 113);
+        height: 210px;
+        width: 550px;
+        font-size: 1.2rem;
+        padding-left: 2%;
+        padding-top: 1%;
+        margin-left: 10%;
+        /* Text Transform: Specifies how the text should be capitalized or transformed. Options include uppercase, lowercase, capitalize (first letter of each word capitalized), etc. */
+      }
+    </style>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1 class="heading">My top 3 Dramas of all time.</h1>
+    <p class="intro">
+      Here I briefly described my top 3 dramas ,why I like them the most.Each of
+      these dramas brings a unique perspective on entrepreneurship, personal
+      growth, and societal challenges, making these dramas compelling choices
+      for me to interested in character-driven narratives and thematic depth.
+    </p>
+    <ol type="1">
+      <li><h3>Startup.</h3></li>
+      <li><h3>Entrepreneurial Age.</h3></li>
+      <li><h3>Be Your Self.</h3></li>
+    </ol>
+    <h2>Startup:</h2>
+    <br />
+    &NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;
+    <img src="./startup.png" />
+
+    &NonBreakingSpace;&NonBreakingSpace;
+    <img src="./startup3.png" />
+
+    &NonBreakingSpace;&NonBreakingSpace;
+
+    <img src="./startup1.png" />
+    <p class="start" id="ert">
+      <strong>"Startup"</strong> is a 2020 South Korean drama series that delves
+      into the world of technology startups through the intertwined lives of its
+      main characters:
+    </p>
+    <ul id="art">
+      <h3>Seo Dal-mi (Bae Suzy)</h3>
+      <li class="start">
+        Seo Dal-mi (Bae Suzy) is a young woman with a dream of becoming a
+        successful entrepreneur like Steve Jobs.
+      </li>
+      <li class="start">
+        She navigates challenges with optimism and determination in both her
+        personal and professional life.
+      </li>
+    </ul>
+    <ul id="alsa">
+      <h3>Nam Do-san (Nam Joo-hyuk)</h3>
+      <li class="start">
+        Nam Do-san is the founder of Samsan Tech, a struggling startup known for
+        its innovative ideas but facing numerous obstacles.
+      </li>
+      <li class="start">
+        He is portrayed as a socially awkward genius who develops romantic
+        feelings for Seo Dal-mi.
+      </li>
+    </ul>
+    <ul id="won">
+      <h3>Won In-jae (Kang Han-na)</h3>
+      <li class="start">
+        Won In-jae is Dal-mi's older sister, characterized by her ambition and
+        successful career at a prestigious company.
+      </li>
+      <li class="start">
+        She shares a complex relationship with her family, particularly with
+        Dal-mi.
+      </li>
+    </ul>
+    <ul id="han">
+      <h3>Han Ji-pyeong (Kim Seon-ho)</h3>
+      <li class="start">
+        Han Ji-pyeong plays a pivotal role as a successful and stoic investor
+        who becomes a mentor to both Seo Dal-mi and Nam Do-san.
+      </li>
+      <li class="start">
+        His troubled past influences his interactions and adds depth to his
+        character.
+      </li>
+    </ul>
+    <div class="end">
+      <h3>Ending (Spoiler Alert):</h3>
+      <p>
+        In the final episodes of "Startup," the characters undergo significant
+        developments in their personal and professional lives. Seo Dal-mi, Nam
+        Do-san, Won In-jae, and Han Ji-pyeong face pivotal moments that shape
+        their futures.
+      </p>
+      <p>
+        Overall, "Startup" captivates me with its blend of
+        hardwork,perserverance, drama, and entrepreneurship, offering insights
+        into the complexities of pursuing dreams and navigating the competitive
+        world of technology startups.
+      </p>
+    </div>
+    <h2>Entrepreneurial Age:</h2>
+    &NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;<img
+      src="./erty.png"
+    />&NonBreakingSpace;&NonBreakingSpace;<img
+      src="ert.png"
+    />&NonBreakingSpace;&NonBreakingSpace;;<img src="./er.png" />
+    <p id="age" class="start">
+      "Entrepreneurial Age"is a Chinese drama , focusing on the journey of
+      entrepreneurs in the technology industry. Here’s an overview of the plot,
+      including the ending:
+    </p>
+
+    <div class="sun">
+      <h3>Plot Summary:</h3>
+      <ul>
+        <li class="start">
+          Guo Xinnian, a young software engineer, develops a new mobile IM
+          software that uses voice messages instead of traditional text
+          messages. With the support of investors and his friends, he embarks on
+          his entrepreneurial journey. Despite facing numerous challenges during
+          the development phase, the app eventually launches successfully.
+        </li>
+        <li class="start">
+          Throughout his journey, Guo Xinnian meets Na Lan, an investment
+          analyst, and they develop a deep friendship while overcoming various
+          obstacles together. As they work closely together, their professional
+          relationship blossoms into a romantic one.
+        </li>
+        <li class="start">
+          However, as Guo Xinnian achieves success with his app, he encounters
+          new challenges that threaten his career and dreams. These challenges
+          test his determination and ability to navigate the competitive tech
+          industry. Guo Xinnian must make difficult decisions to protect his
+          company and continue pursuing his entrepreneurial ambitions.
+        </li>
+      </ul>
+    </div>
+    <div class="spoiler">
+      <h3>Ending (Spoiler Alert):</h3>
+      <ul>
+        <li class="start">
+          In the concluding episodes of "Entrepreneurial Age," Guo Xinnian
+          confronts a critical decision point that could determine the future of
+          his career and relationship with Na Lan. He faces setbacks and
+          betrayals from competitors and must rely on his resilience and
+          strategic thinking to overcome these challenges.
+        </li>
+        <li class="start">
+          "Ultimately, Guo Xinnian manages to navigate the turmoil in the tech
+          industry and safeguard his company's interests. He learns valuable
+          lessons about perseverance, trust, and the importance of true
+          friendship and love. The drama ends on a hopeful note, with Guo
+          Xinnian achieving both professional success and personal fulfillment
+          alongside Na Lan, who supports him throughout his journey.
+        </li>
+        <li class="start">
+          "Entrepreneurial Age" is praised for its portrayal of the startup
+          environment, the intricacies of entrepreneurship, and the dynamics of
+          relationships amidst professional challenges. It offers a blend of
+          drama, romance, and business intrigue, making it a compelling watch
+          for viewers interested in stories about ambition and innovation in the
+          tech world.
+        </li>
+      </ul>
+    </div>
+    <h2>Be Yourself:</h2>
+    &NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;
+
+    <img src="./be your self.png" alt="Be Yourself" />
+    <p id="yourself" class="start">
+      "Be Yourself" (also known as "Be Melodramatic") is a 2021 Chinese drama
+      series directed by Li Zhi, which centers around the lives of four young
+      women embarking on their university journey. Each character possesses
+      unique traits and aspirations that shape their individual paths to
+      self-discovery and independence.
+    </p>
+    <ul>
+      <h3>Xia Lang Lang (Shen Yue)</h3>
+      <li class="start">
+        Xia Lang Lang (Shen Yue) starts off as tomboyish and logical but
+        discovers her softer side and the possibility of romance as she
+        navigates university life.
+      </li>
+      <h3>Huang Fu Shu Min (Zhang Ruo Nan)</h3>
+      <li class="start">
+        Huang Fu Shu Min (Zhang Ruo Nan), who thrives on acting cute and
+        dependent, learns the importance of independence and begins to forge her
+        own path towards personal growth.
+      </li>
+      <h3>Fan Xiao Yu (Vivienne Tien)</h3>
+      <li class="start">
+        Fan Xiao Yu (Vivienne Tien), an intelligent beauty from a wealthy
+        family, initially adheres to familial expectations but finds freedom and
+        potential romance through exploring the world of business with a fellow
+        student.
+      </li>
+      <h3>Yang Jia Qian (Zhang Xin Yi)</h3>
+      <li class="start">
+        Yang Jia Qian (Zhang Xin Yi), appearing mature beyond her years,
+        confronts her hidden thoughts and feelings now that she's away from her
+        family's influence.
+      </li>
+    </ul>
+    <p class="start">
+      Throughout the series, these women support each other through challenges,
+      career aspirations, and personal relationships, demonstrating the
+      complexities of modern life and the pursuit of individual identity.The
+      drama concludes on a note of empowerment and self-discovery, as each
+      character embraces their true selves and navigates towards fulfilling
+      their dreams and desires amidst the trials of university and beyond.
+    </p>
+  </body>
+</html>
